@@ -1,0 +1,51 @@
+{
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "done": {
+      "type": "boolean"
+    },
+    "due_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "rating": {
+      "type": "integer",
+      "maximum": 5
+    },
+    "email": {
+      "title": "Email",
+      "type": "string",
+      "pattern": "^\\S+@\\S+$",
+      "description": "Email will be used for evil."
+    },
+    "recurrence": {
+      "type": "string",
+      "enum": [
+        "Never",
+        "Daily",
+        "Weekly",
+        "Monthly"
+      ]
+    },"rating": {
+      "type": "integer",
+      "maximum": 5
+    },
+    "button":{
+        "type":"string",
+        "x-schema-form": {
+            "title":"Cancel",
+            "type": "submit"
+        }
+    }
+
+  },
+  "required": [
+    "name"
+  ]
+}

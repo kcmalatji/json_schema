@@ -1,0 +1,44 @@
+{
+    "type": "VerticalLayout",
+    "elements": [
+     
+      {
+        "type": "Control",
+        "scope": "#/properties/name"
+      }, {
+        "type": "Control",
+        "scope": "#/properties/button"
+      },
+      {
+        "type": "Control",
+        "scope": "#/properties/email"
+      },
+      {
+        "type": "HorizontalLayout",
+        "elements": [
+          {
+            "type": "Control",
+            "scope": "#/properties/due_date"
+          }
+          
+        ]
+      },
+      {
+        "type": "Control",
+        "scope": "#/properties/description",
+        "options": {
+            "multi": true
+        }
+      },
+      
+      {
+        "type": "HorizontalLayout",
+        "elements": [
+          {
+            "type": "Control",
+            "scope": "#/properties/recurrence"
+          }
+        ]
+      }
+    ]
+  }
