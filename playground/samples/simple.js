@@ -3,35 +3,8 @@ module.exports = {
     title: "Product registration form",
     description: "A simple form example.",
     type: "object",
-    required: ["firstName", "lastName"],
+    // required: ["firstName", "lastName"],
     properties: {
-      firstName: {
-        type: "string",
-        title: "First name",
-        default: "Chuck",
-      },
-      lastName: {
-        type: "string",
-        title: "Last name",
-      },
-      age: {
-        type: "integer",
-        title: "Age",
-      },
-      bio: {
-        type: "string",
-        title: "Bio",
-      },
-      password: {
-        type: "string",
-        title: "Password",
-        minLength: 3,
-      },
-      telephone: {
-        type: "string",
-        title: "Telephone",
-        minLength: 10,
-      },
       image: {
         "type": "string",
         "title":"",
@@ -42,46 +15,112 @@ module.exports = {
         },
         "default": "https://upload.wikimedia.org/wikipedia/en/thumb/8/80/First_National_Bank_Logo.svg/1200px-First_National_Bank_Logo.svg.png"
       },
+      principalDebit: {
+        type: "integer",
+        title: "Principal debit(Loan amount)?:",
+        
+      },recalculate: {
+        type: "string",
+        // title: "Recalculate",
+        
+      },
+      annualInterestRate: {
+        type: "string",
+        title: "Annual interest rate:",
+        
+      },
+      initiationFee: {
+        type: "integer",
+        title: "Initiation Fee:",
+        
+      },
+      monthlyServiceFee: {
+        type: "integer",
+        title: "Monthly service fee:",
+        
+      }, totalMonthlyRepayable: {
+        type: "integer",
+        title: "Total Monthly Repayable:",
+        
+      },
+      customerProtectionPlan: {
+        type: "integer",
+        title: "Customer Protection Plan:",
+        
+      },
+      firstInstallmentDate: {
+        type: "integer",
+        title: "First installment Date:",
+        
+      },
+      TotalCostofCredit: {
+        type: "integer",
+        title: "Total Cost of Credit:",
+        
+      },
+      totalInterestPayable: {
+        type: "integer",
+        title: "Total Interest Payable:",
+        
+      },
+      
+      loanPurpose: {
+        type: "array",
+        title: "Loan Purpose:",
+        items: {
+        enum:["BUILDING MATERIAL","BUY FOOD","CLOTHING","DEBT CONSOLIDATION","FUNERAL","FIX A CAR","HOME MAINTENANCE","SCHOOL FEES","START A BUSINESS","UNEXPECTED MEDICAL EXPENSES","WATER/ELECTRICITY","EDUCATION","STUDY LOAN"]
+        }, 
+      },
+
+
+
+
+
+
+
     },
   },
   uiSchema: {
-    "ui:order":["image","*"],
-    firstName: {
-      "ui:autofocus": true,
-      "ui:emptyValue": "",
-    },image:{
+    image:{
       "ui:options": {
         inputType: "image",
       }
       
     },
-
-
-    age: {
-      "ui:widget": "updown",
-      "ui:title": "Age of person",
-      "ui:description": "(earthian year)",
-    },
-    bio: {
-      "ui:widget": "textarea",
-    },
-    password: {
-      "ui:widget": "password",
-      "ui:help": "Hint: Make it strong!",
-    },
-    date: {
-      "ui:widget": "alt-datetime",
-    },
-    telephone: {
+    recalculate:{
       "ui:options": {
-        inputType: "tel",
-      },
-    },
+        inputType: "submit",
+      }
+      
+    }
+
+
+    // age: {
+    //   "ui:widget": "updown",
+    //   "ui:title": "Age of person",
+    //   "ui:description": "(earthian year)",
+    // },
+    // bio: {
+    //   "ui:widget": "textarea",
+    // },
+    // password: {
+    //   "ui:widget": "password",
+    //   "ui:help": "Hint: Make it strong!",
+    // },
+    // date: {
+    //   "ui:widget": "alt-datetime",
+    // },
+    // telephone: {
+    //   "ui:options": {
+    //     inputType: "tel",
+    //   },
+    // },
   },
   formData: {
-    lastName: "Norris",
-    age: 75,
-    bio: "Roundhouse kicking asses since 1940",
-    password: "noneed"
+    recalculate:"Recalculate"
+    // lastName: "Norris",
+    // age: 75,
+    // bio: "Roundhouse kicking asses since 1940",
+    // password: "noneed"
   },
 };
