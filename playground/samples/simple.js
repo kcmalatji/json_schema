@@ -27,16 +27,17 @@ module.exports = {
       annualInterestRate: {
         type: "string",
         title: "Annual interest rate:",
-        
+        default:15.00 +"%"
       },
       initiationFee: {
         type: "integer",
         title: "Initiation Fee:",
-        
+        default:"ZAR " + 1197.00
       },
       monthlyServiceFee: {
         type: "integer",
         title: "Monthly service fee:",
+        default:"ZAR " + 68.80 
         
       }, totalMonthlyRepayable: {
         type: "integer",
@@ -65,18 +66,12 @@ module.exports = {
       },
       
       loanPurpose: {
-        type: "array",
+        type: "string",
         title: "Loan Purpose:",
-        items: {
-        enum:["BUILDING MATERIAL","BUY FOOD","CLOTHING","DEBT CONSOLIDATION","FUNERAL","FIX A CAR","HOME MAINTENANCE","SCHOOL FEES","START A BUSINESS","UNEXPECTED MEDICAL EXPENSES","WATER/ELECTRICITY","EDUCATION","STUDY LOAN"]
-        }, 
+        enum:["BUILDING MATERIAL","BUY FOOD","CLOTHING","DEBT CONSOLIDATION","FUNERAL","FIX A CAR","HOME MAINTENANCE","SCHOOL FEES","START A BUSINESS","UNEXPECTED MEDICAL EXPENSES","WATER/ELECTRICITY","EDUCATION","STUDY LOAN"],
+        enumNames:["BUILDING MATERIAL","BUY FOOD","CLOTHING","DEBT CONSOLIDATION","FUNERAL","FIX A CAR","HOME MAINTENANCE","SCHOOL FEES","START A BUSINESS","UNEXPECTED MEDICAL EXPENSES","WATER/ELECTRICITY","EDUCATION","STUDY LOAN"]
+        
       },
-
-
-
-
-
-
 
     },
   },
@@ -93,7 +88,6 @@ module.exports = {
       }
       
     }
-
 
     // age: {
     //   "ui:widget": "updown",
@@ -117,8 +111,8 @@ module.exports = {
     // },
   },
   formData: {
-    recalculate:"Recalculate"
-    // lastName: "Norris",
+    recalculate:"Recalculate",
+    //  annualInterestRate: 15.00 +"%"
     // age: 75,
     // bio: "Roundhouse kicking asses since 1940",
     // password: "noneed"
